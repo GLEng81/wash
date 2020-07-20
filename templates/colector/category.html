@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Colector
+    </title>
+</head>
+
+    <body>
+        <div>
+            {% if category %}
+            <h1>{{ category.name }}</h1>
+                {% if pages %}
+                <ul>
+                    {% for page in pages %}
+                    <li><a>{{ page.time }}</a>|  ====>>  |<a>{{ page.msg }}</a></li>
+                    {% endfor %}
+                </ul>
+                {% else %}
+                <strong>No pages cur in cat!</strong>
+                {% endif %}
+            {% else %}
+                The spec cat does not exist!
+            {% endif %}
+        </div>
+</body>
+</html>
