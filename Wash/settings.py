@@ -123,10 +123,15 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST_USER ='service@5minutes-bg.com'
+EMAIL_HOST_USER = 'service@5minutes-bg.com'
 EMAIL_HOST ='mail.5minutes-bg.com'
-EMAIL_PORT = 465
-EMAIL_USE_SSL = True
+EMAIL_PORT = 26
+EMAIL_USE_TLS = True
 EMAIL_HOST_PASSWORD = 'EjaE8RB!Qy@A'
-
+#EMAIL_HOST_PASSWORD = 'huhavles81'
+#EMAIL_HOST_PASSWORD = 'huhavles81'
 BACKGROUND_TASK_RUN_ASYNC = True
+
+# Configure Django App for Heroku.
+import django_heroku
+django_heroku.settings(locals())
