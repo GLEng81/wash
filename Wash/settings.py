@@ -130,3 +130,7 @@ EMAIL_USE_SSL = True
 EMAIL_HOST_PASSWORD = 'EjaE8RB!Qy@A'
 
 BACKGROUND_TASK_RUN_ASYNC = True
+
+# Configure Django App for Heroku.
+import django_heroku
+django_heroku.settings(locals())
